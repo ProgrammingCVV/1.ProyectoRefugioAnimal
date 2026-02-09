@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?xml-model href="VentanaInfoAnimales.fxml"?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VentanaInfoAnimalesController">
+   <children>
+      <ImageView fitHeight="95.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/ENCABEZADO.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="26.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Animal:" />
+      <Text layoutX="30.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Hábitat:" />
+      <Text layoutX="26.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID del Animal:" />
+      <Text layoutX="29.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Aseo:" />
+      <Text layoutX="30.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Observaciones:" />
+      <Text layoutX="29.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuidadores:" />
+      <Text layoutX="399.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de Animales">
+         <font>
+            <Font name="Bell MT" size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="animal_link" fill="#7ab0e9" fontSmoothingType="LCD" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AnimalLink" textAlignment="CENTER" wrappingWidth="281.13671875">
+         <font>
+            <Font name="System Italic" size="48.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="icono_huella" fitHeight="93.0" fitWidth="115.0" layoutX="246.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/LOGO_ANIMAL_LINK-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSalir" layoutX="939.0" layoutY="639.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="30.0" prefWidth="73.0" text="Salir" />
+      <Button fx:id="btnVolver" layoutX="854.0" layoutY="639.0" mnemonicParsing="false" onAction="#btnVolver" prefHeight="30.0" prefWidth="73.0" text="Volver" />
+      <TextArea fx:id="CmpObservaciones" disable="true" layoutX="130.0" layoutY="481.0" opacity="0.74" prefHeight="124.0" prefWidth="439.0" wrapText="true" />
+      <ImageView fitHeight="177.0" fitWidth="215.0" layoutX="342.0" layoutY="146.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/CUIDADOR.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="cmpIDanimal" disable="true" editable="false" layoutX="172.0" layoutY="181.0" opacity="0.74" promptText="Identificación Numérica" />
+      <TextField fx:id="cmpNombreAnimal" disable="true" editable="false" layoutX="172.0" layoutY="148.0" opacity="0.74" promptText="Nombre" />
+      <Text layoutX="583.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condiciones de Salud:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <TextField disable="true" editable="false" layoutX="171.0" layoutY="386.0" opacity="0.74" />
+      <TextField disable="true" editable="false" layoutX="171.0" layoutY="418.0" opacity="0.74" />
+      <TextField disable="true" editable="false" layoutX="171.0" layoutY="451.0" opacity="0.74" />
+      <Button defaultButton="true" layoutX="715.0" layoutY="178.0" mnemonicParsing="false" text="Exámenes y Resultados" />
+      <TextField disable="true" editable="false" layoutX="172.0" layoutY="214.0" opacity="0.74" prefHeight="25.0" prefWidth="93.0" promptText="Años y meses" />
+      <Text layoutX="28.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edad: " />
+      <Button defaultButton="true" layoutX="715.0" layoutY="243.0" mnemonicParsing="false" text="Vacunas" />
+      <Button defaultButton="true" layoutX="715.0" layoutY="210.0" mnemonicParsing="false" text="Historial Médico" />
+      <Button defaultButton="true" layoutX="716.0" layoutY="145.0" mnemonicParsing="false" text="Controles y Tratamientos" />
+      <Button layoutX="893.0" layoutY="162.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="120.0" text="GENERAR REPORTE" />
+      <TextField layoutX="32.0" layoutY="92.0" prefHeight="25.0" prefWidth="281.0" promptText="Nombre o ID de Animal" />
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="288.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/Buscar-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <TextArea disable="true" layoutX="715.0" layoutY="278.0" opacity="0.74" prefHeight="355.0" prefWidth="295.0" wrapText="true" />
+      <Button layoutX="316.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" />
+      <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="324.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/lupa-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="830.0" layoutY="450.0" opacity="0.31" strokeType="OUTSIDE" strokeWidth="0.0" text="Vista previa Condiciones de Salud" textAlignment="CENTER" wrappingWidth="70.91015625" />
+      <TextField disable="true" layoutX="171.0" layoutY="313.0" opacity="0.74" prefHeight="25.0" prefWidth="149.0" promptText="Hábitat" />
+      <TextField disable="true" layoutX="171.0" layoutY="349.0" opacity="0.74" promptText="Aseo" />
+      <Button fx:id="btnGaleria" layoutX="347.0" layoutY="304.0" mnemonicParsing="false" onAction="#btnGaleria" prefHeight="25.0" prefWidth="215.0" text="Galería de fotos" />
+      <Text layoutX="29.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Alimentación:" />
+      <TextField disable="true" editable="false" layoutX="172.0" layoutY="279.0" opacity="0.74" promptText="Alimentación" />
+      <Text layoutX="28.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Especie:" />
+      <TextField disable="true" editable="false" layoutX="172.0" layoutY="246.0" opacity="0.74" promptText="Gato, Perro, Ave, etc" />
+      <Button layoutX="977.0" layoutY="278.0" mnemonicParsing="false" opacity="0.3" prefHeight="25.0" prefWidth="32.0" />
+      <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="985.0" layoutY="283.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/flecha-removebg-preview%20(1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="281.0" layoutY="92.0" mnemonicParsing="false" opacity="0.2" prefHeight="25.0" prefWidth="32.0" />
+   </children>
+</AnchorPane>

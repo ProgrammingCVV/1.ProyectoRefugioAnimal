@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane focusTraversable="true" prefHeight="675.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VentanaG_UsuariosController">
+   <children>
+      <ImageView fx:id="Encabezado" fitHeight="74.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/ENCABEZADO.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnVolver" defaultButton="true" layoutX="861.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnVolver" prefHeight="30.0" prefWidth="73.0" text="Volver" />
+      <Text fx:id="animal_link" fill="#7ab0e9" fontSmoothingType="LCD" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AnimalLink" textAlignment="CENTER" wrappingWidth="281.13671875">
+         <font>
+            <Font name="System Italic" size="48.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="icono_huella" fitHeight="93.0" fitWidth="115.0" layoutX="245.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/LOGO_ANIMAL_LINK-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSalir" layoutX="948.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="30.0" prefWidth="73.0" text="Salir" />
+      
+      <!-- Tabla para mostrar los usuarios -->
+      <TableView fx:id="tablaUsuarios" layoutX="50.0" layoutY="100.0" prefHeight="400.0" prefWidth="930.0">
+         <columns>
+            <TableColumn fx:id="colNombre" prefWidth="310.0" text="Nombre Animal">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nombreUsuario" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colRol" prefWidth="150.0" text="Rol">
+               <cellValueFactory>
+                  <PropertyValueFactory property="rol" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+
+      <!-- Botones para gestionar usuarios -->
+      <Button fx:id="btnAgregar" layoutX="50.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnAgregarUsuario" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #155AFC9E;" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="160.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnEliminarUsuario" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #155AFC9E;" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="270.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnEditarUsuario" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #155AFC9E;" text="Editar" />
+      
+      <!-- Campos de entrada para agregar/editar usuarios -->
+      <TextField fx:id="txtNombreUsuario" layoutX="400.0" layoutY="520.0" prefHeight="30.0" prefWidth="150.0" promptText="Nombre Usuario" />
+      <TextField fx:id="txtContrasena" layoutX="560.0" layoutY="520.0" prefHeight="30.0" prefWidth="150.0" promptText="Contraseña" />
+      <TextField fx:id="txtRol" layoutX="720.0" layoutY="520.0" prefHeight="30.0" prefWidth="150.0" promptText="Rol (admin/cuidador)" />
+   </children>
+</AnchorPane>
